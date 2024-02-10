@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{22BF8E2D-5E69-44DF-A0A5-F07165EDC326}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ACERP.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="C:\WebChart\TBGWebCharts\Sample\VCL\TBGWebCharts_VLC_Demo\TBGWebCharts_VCL_Demo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ACERP">
+        <MSBuild Projects="ACERP.dproj"/>
+    </Target>
+    <Target Name="ACERP:Clean">
+        <MSBuild Projects="ACERP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ACERP:Make">
+        <MSBuild Projects="ACERP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TBGWebCharts_VCL_Demo">
+        <MSBuild Projects="C:\WebChart\TBGWebCharts\Sample\VCL\TBGWebCharts_VLC_Demo\TBGWebCharts_VCL_Demo.dproj"/>
+    </Target>
+    <Target Name="TBGWebCharts_VCL_Demo:Clean">
+        <MSBuild Projects="C:\WebChart\TBGWebCharts\Sample\VCL\TBGWebCharts_VLC_Demo\TBGWebCharts_VCL_Demo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TBGWebCharts_VCL_Demo:Make">
+        <MSBuild Projects="C:\WebChart\TBGWebCharts\Sample\VCL\TBGWebCharts_VLC_Demo\TBGWebCharts_VCL_Demo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ACERP;TBGWebCharts_VCL_Demo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ACERP:Clean;TBGWebCharts_VCL_Demo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ACERP:Make;TBGWebCharts_VCL_Demo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

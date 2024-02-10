@@ -1,0 +1,30 @@
+{
+	"hash": "d41d8cd98f00b204e9800998ecf8427e",
+	"updated": "2023-07-28T21:06:34.0577337+01:00",
+	"installedModules": {
+		"https://github.com/academiadocodigo/localcache4d": {
+			"name": "localcache4d",
+			"version": "1.0.4",
+			"hash": "78a7747cc7f2f79822d67610672800a5",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"https://github.com/academiadocodigo/router4delphi": {
+			"name": "router4delphi",
+			"version": "1.0.8",
+			"hash": "3a4df5a56cfc2aedb664330a3428400f",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"https://github.com/academiadocodigo/simpleorm": {
+			"name": "simpleorm",
+			"version": "2.02.11",
+			"hash": "2863bb98c4844bb06eab96aa858a4e96",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		}
+	}
+}
